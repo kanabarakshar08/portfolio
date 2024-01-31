@@ -1,0 +1,299 @@
+:root{
+    --bg-skills-color:#f5f8fd;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+main{
+    position: absolute;
+    left: 299px;
+    z-index: 999;
+}
+.space{
+    padding: 80px 0;
+}
+/* header */
+.sidebar{
+    position: fixed;
+    top: 0;
+    width: 290px;
+    height: 100vh;
+}
+.sidebar-img{
+    background-image: url('../images/akshar.jpg');
+    width: 100px;
+    height: 100px;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    border-radius: 50%;
+    border: 5px solid rgb(255, 255, 255);
+}
+nav ul{
+    padding-left: 0;
+}
+nav ul li a i{  
+    transition: all 0.2s linear;
+}
+nav ul li a :hover nav ul li a i{
+    color: #149ddd !important;
+}
+nav ul li a{
+    padding: 1rem !important;
+    transition: all 0.2s linear;
+    font-size: 20px;
+}
+nav ul li a:hover{
+    color: white !important;
+}
+/* banner */
+.banner-img{
+    background-image: url('../images/akshar2');
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:  top;
+    background-blend-mode: darken;
+    background-attachment: fixed;
+    background-color: rgba(0, 0, 0, 0.299);
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+}
+.banner-img h1 {
+    margin: 0 0 10px 0;
+    font-size: 64px;
+    font-weight: 600;
+    line-height: 56px;
+    color: #fff;  
+  }
+ .banner-img #changingText {
+    border-bottom: 3px solid #149ddd;
+    border-right: 1px solid black;
+    animation: cursoranim 1s linear infinite;
+  }
+  @keyframes cursoranim {
+    50% {
+      border-right: 1px solid rgba(255, 255, 255, 0);
+    }
+  }
+
+/* about */
+.about-title h2{
+    position: relative;
+}
+.about-title h2::after{
+    position: absolute;
+    content: '';
+    top: 100%;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background-color: #149ddd;
+    margin-top: 10px;
+}
+.about-item-contain ul li{
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+.about-item-contain ul li i{
+    font-size: 16px !important;
+    margin-right: 5px;
+    color: .149ddd;
+}
+/* facts */
+.facts .count-box h1 {
+        display: inline-block;
+        font-size: 40px;
+        line-height: 40px;
+        font-weight: 600;
+       color: #050d18;
+      margin-left: 20px;
+}
+  .facts .count-box i {
+    font-size: 33px;
+    color: #149ddd;
+  }
+  .facts .count-box p {
+    margin-left: 70px;
+  }
+/* skills  */
+.skills{
+  background-color: var(--bg-skills-color);
+}
+.skills-title h2 , .resume-title h2 , .portfolio-title h2 , .contact-title h2 , .facts-title h2{
+    position: relative;
+}
+.skills-title h2::after , .resume-title h2::after , .portfolio-title h2::after , .contact-title h2::after , .facts-title h2::after{
+    position: absolute;
+    content: '';
+    top: 100%;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background-color: #149ddd;
+    margin-top: 10px;
+}
+.skillls, .portfolio{
+    background-color: var(--bg-skills-color);
+}
+#skills .skills-contain { 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#skills .skills-contain img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover; 
+}
+#skills .skills-contain span {
+  display: flex;
+  justify-content: space-between;
+  font-size: 24px;
+  margin: 0 0 30px 0;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #050d18;
+} 
+/* Resume */
+.resume-contain{
+    border-left: 2px solid  #1f5297;
+    padding: 0 0 20px 20px;
+    position: relative;
+}
+.resume-item-title h3{
+    font-size: 26px;
+}
+.resume-item h4{
+    font-size: 19px;
+}
+.resume-item h5{
+    font-size: 16px;
+    background-color: #e4edf9;
+    padding: 5px 15px;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+.resume-contain::after{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: -9px;
+    background: #fff;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 2px solid .1f5297;
+}
+/* portfolio */
+.portfolio-item img{
+    margin: 10px 10px !important;
+}
+.portfolio-container{
+    column-count: 3;
+}
+.btn-group{
+    border: 1px solid #149ddd;
+    border-radius: 20px;
+    background-color: white;
+    transition: all 0.2s linear;
+}
+.btn-group button:hover{
+  color: #149ddd;
+}
+.port-btn{
+    padding: 8px 20px;
+    margin:10px;
+    font-size: 14px;
+    transition: all 0.2s linear;
+}
+.portfolio-item img{
+   position: relative;
+   top: 0;
+   transition: all 0.3s linear;
+}
+.portfolio-item:hover .portfolio-contain{
+    opacity: 1;
+    bottom: 0px;
+}
+.portfolio-contain{
+    opacity: 0;
+    position: absolute;
+    left: 9px;
+    right: 0px;
+    bottom: -70px;
+    background-color:#1f5197a5;
+    padding: 22px 10px;
+    transition: all ease-in-out 0.2s;
+}
+.portfolio-icon{
+    position: absolute;
+    top:0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+.portfolio-icon a{
+    transition: all 0.2s linear;
+    color: black;
+}
+.portfolio-icon a:hover{
+    color: white;
+}
+.activeble {
+    display: none;
+  }
+
+/* contact */
+.contect .info {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  }
+  .contect .info .icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: #149ddd3a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+  }
+  .contect .info i {
+    font-size: 23px;
+    color: #149ddd;
+    margin: 20px;
+  }
+  .contect .info h3 {
+    font-size: 23px;
+  }
+  .contect form {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  }
+  .contect form label {
+    margin: 7px 0;
+  }
+  .contect .info div:hover .icon {
+    background-color: #149ddd;
+  }
+  .contect .info div:hover .icon i {
+    color: white;
+  }
+  .form-items-contain{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 8px 0;
+  }
+  .form-items-contain P{
+    margin-bottom: 0;
+    margin-left: 9px;
+  }
